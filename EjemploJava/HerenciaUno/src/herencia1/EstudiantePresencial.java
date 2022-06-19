@@ -1,14 +1,15 @@
 
-package herenciauno;
+package herencia1;
 
 public class EstudiantePresencial extends Estudiante{
     /*1.  Declarar
         numeroCreditos: Entero 
         costoCredito: Real 
         matriculaPresencial: Real */
-    int numeroCreditos;
-    double costoCredito;
-    double matriculaPresencial;
+    private int numeroCreditos;
+    private double costoCredito;
+    private double matriculaPresencial;
+    
     
     //  Métodos establecer y calcular para los datos o atributos de la clase
     // 2.  Método establecerNumeroCreditos(numero: Real)
@@ -40,6 +41,17 @@ public class EstudiantePresencial extends Estudiante{
     // 7. Método obtenerMatriculaPresencial() : Real
     public double obtenerMatriculaPresencial(){
         return matriculaPresencial;
+    }
+    @Override
+    public String toString(){
+        
+        String reporte = String.format("Nombre: %s\nApellido: %s\nIdentificación: %s\n"
+                + "Edad: %s\nNúmero de Creditos: %d\nCosto de creditos: %.1f\n"
+                + "Matricula: %.1f\n", nombresEstudiante, apellidosEstudiante,
+                identificacionEstudiante, edadEstudiante, numeroCreditos,
+                costoCredito,  matriculaPresencial);
+        
+        return reporte;
     }
     
 }
